@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@import 'vars';
+
+:host {
+  background: mat-color($app-primary, 900);
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+
+  .ngx-header {
+    &__container {
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-areas: 'logo title';
+      justify-content: center;
+    }
+    &__logo {
+      grid-area: logo;
+      a {
+        cursor: pointer;
+        display: block;
+      }
+      img {
+        max-width: 60px;
+      }
+    }
+    &__title {
+      color: $white;
+      grid-area: title;
+      margin-left: 15px;
+    }
+  }
+}

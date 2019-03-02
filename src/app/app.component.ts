@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'ngxs-root',
+  selector: 'ngx-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'ngx-adasl-pwa';
+export class AppComponent implements OnInit {
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    const locale = 'en-US';
+    this.translate.setDefaultLang(locale);
+    this.translate.use(locale);
+  }
 }
