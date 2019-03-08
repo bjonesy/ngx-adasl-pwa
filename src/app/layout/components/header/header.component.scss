@@ -16,6 +16,7 @@
       grid-template-columns: auto 1fr;
       grid-template-areas: 'logo title';
       justify-content: center;
+      padding-left: 15px;
     }
     &__logo {
       grid-area: logo;

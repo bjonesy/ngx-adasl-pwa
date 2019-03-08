@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
+import { StandingsComponent } from './standings/standings.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, StandingsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

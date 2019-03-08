@@ -1,3 +1,11 @@
 <ngx-header title="{{ 'COMMON.adasl' | translate }}"></ngx-header>
-
-<router-outlet></router-outlet>
+<ng-template #showLogin>
+  <div class="ngx-root__login">
+    <p>Please login.</p>
+    <button mat-button class="login-button" (click)="login()">Login with Google</button>
+  </div>
+</ng-template>
+<div *ngIf="(afAuth.user | async) as user; else showLogin">
+  <button mat-button class="logout-button" (click)="logout()">Logout</button>
+  <router-outlet></router-outlet>
+</div>
