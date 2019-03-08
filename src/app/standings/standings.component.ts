@@ -33,7 +33,7 @@ export class StandingsComponent implements OnInit {
     this.itemsCollection = this.afs
       .collection<Team>('adasl')
       .doc('seasons')
-      .collection<Team>('2018-2019');
+      .collection<Team>('2018-2019', team => team.orderBy('position'));
 
     this.teams$ = this.itemsCollection.valueChanges();
   }
