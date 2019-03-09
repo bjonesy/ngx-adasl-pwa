@@ -1,3 +1,6 @@
+@import '~@angular/material/theming';
+@import 'vars';
+
 :host {
   table {
     max-width: 960px;
@@ -6,9 +9,42 @@
   }
 
   .team-logo {
-    display: block;
-    margin: 0 auto;
-    max-height: 40px;
-    max-width: 44px;
+    text-align: center;
+    &--img {
+      display: block;
+      margin: 0 auto;
+      max-height: 40px;
+      max-width: 44px;
+    }
+  }
+
+  .team-name {
+    padding: 0 0px 0 10px;
+  }
+
+  .team-losses,
+  .team-draws,
+  .goals-for,
+  .team-wins,
+  .games-played,
+  .goal-diff,
+  .team-points {
+    text-align: center;
+  }
+
+  // Mobile
+  @media (max-width: $breakpoint-max-sm) {
+    .team-logo {
+      &--img {
+        max-height: 24px;
+        max-width: 24px;
+      }
+    }
+
+    .team-losses,
+    .team-draws,
+    .goals-for {
+      display: none;
+    }
   }
 }

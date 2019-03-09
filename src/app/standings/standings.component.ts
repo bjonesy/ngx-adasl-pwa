@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   AngularFirestore,
   AngularFirestoreCollection
@@ -13,7 +13,7 @@ import { Team } from './models';
   templateUrl: './standings.component.html',
   styleUrls: ['./standings.component.scss']
 })
-export class StandingsComponent implements OnInit {
+export class StandingsComponent {
   private itemsCollection: AngularFirestoreCollection<Team>;
   teams$: Observable<Array<Team>>;
   displayedColumns: Array<string> = [
@@ -37,6 +37,4 @@ export class StandingsComponent implements OnInit {
 
     this.teams$ = this.itemsCollection.valueChanges();
   }
-
-  ngOnInit(): void {}
 }

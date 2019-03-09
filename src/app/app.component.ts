@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { TranslateService } from '@ngx-translate/core';
-import { auth } from 'firebase';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'ngx-root',

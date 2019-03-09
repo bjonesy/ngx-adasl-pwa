@@ -2,7 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {
+  AngularFirestoreModule,
+  FirestoreSettingsToken
+} from '@angular/fire/firestore';
 
 import { from, Observable } from 'rxjs';
 
@@ -33,6 +36,6 @@ export class WebpackTranslateLoader implements TranslateLoader {
       }
     })
   ],
-  providers: []
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }]
 })
 export class CoreModule {}

@@ -6,3 +6,15 @@ $app-warn: mat-palette($mat-red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 $white: #fff;
+
+// Grid breakpoints
+// min-width
+$breakpoint-min-sm: 576px;
+$breakpoint-min-md: 768px;
+$breakpoint-min-lg: 992px;
+$breakpoint-min-xl: 1200px;
+// max-width
+$breakpoint-max-xs: 575.98px;
+$breakpoint-max-sm: 767.98px;
+$breakpoint-max-md: 991.98px;
+$breakpoint-max-lg: 1199.98px;
