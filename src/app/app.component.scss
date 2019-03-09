@@ -15,8 +15,21 @@
   }
   .ngx-root {
     &__login {
-      margin: 50% auto;
+      margin: 15% auto;
       max-width: 200px;
+      text-align: center;
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  // Mobile
+  @media (max-width: $breakpoint-max-sm) {
+    .ngx-root {
+      &__login {
+        margin: 30% auto;
+      }
     }
   }
 }
